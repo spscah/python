@@ -1,0 +1,6 @@
+{
+  "name": "Python",
+  "tagline": "An introductory python course",
+  "body": "# python\r\nAn introductory python course\r\n\r\nThis course takes you on a week by week course through learning python. \r\n\r\nEach week should has a focus, with questions for discussion in class and then to spend some time working at home. \r\n\r\nThis course is heavily influenced by [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/), although some of the exercises are very different. \r\n\r\n1. Installing and Runing Python\r\n1. The Command Line \r\n1. Variables, Data Types and simple input/output \r\n1. User Interface using Turtles \r\n1. Simple functions\r\n1. Conditional statements \r\n1. Chatterbox Functions \r\n1. Iteration \r\n\r\n\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
