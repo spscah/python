@@ -19,7 +19,8 @@
 			- [Mac](#mac)
 			- [Linux](#linux)
 			- [Running Online](#running-online)
-	- [The Command Line](#the-command-line)
+	- [IDLE and The Command Line](#idle-and-the-command-line)
+		- [Hello, World](#hello-world)
 	- [Variables, Data Types and simple input/output](#variables-data-types-and-simple-inputoutput)
 	- [User Interface using Turtles](#user-interface-using-turtles)
 	- [Simple functions](#simple-functions)
@@ -35,13 +36,13 @@
 
 ## Running Python
 
-We use Python version 3. You might find Python version 2 installed on your own machine. If you only have v2 much of what you write will be fine but some of the examples might not work and also, some python 2 code will not run on v3.
+We use Python version 3. You might find Python version 2 installed on your own machine. If you only have v2 much of what you write will be fine but some of the examples written here might not work but, more importantly, quite a bit of v2 code will not run on v3.
 
 ### Finding help
 
 There are four steps to enlightenment
 
-1. Think about it - need your notes or your old code
+1. Think about it - read your notes or your old code
 1. Ask a friend - the act of asking a question is often helpful to thinking of an answer
 1. Google it - reading other people's answers can certainly be helpful
 1. Ask a teacher - this should only be step 4
@@ -106,8 +107,47 @@ You're _l33t_ already. Google it, ninja.
 
 #### Running Online
 
-## The Command Line
+## IDLE and The Command Line
 
+Python is an _interpreted_ language, this means that the code you write is read by the computer line-by-line and dealt with there and then. Many languages are _compiled_, this is when your code is translated into a computer-readable form and stored in a separate file, e.g. an app file or an .EXE which can then be run many times on its own, without the compiler.
+
+What this means is that you can type lines straight into the **command line** (sometimes known as the shell) or save them into a text file and have Python run them.
+
+We will be using Python's program called **IDLE** - its **I**ntegrated **D**eve**L**opment **E**nvironment. **IDLE** allows us to use the command line or to run files of Python.
+
+When you run IDLE you are given a command line which is indicated by three greater than symbols:
+
+```
+>>>
+```
+
+You can always type any Python command here. Importantly, you will be able to call your own code from here.
+
+### Hello, World
+
+The classic program to start is to have the program print the words 'Hello, World'. At the command line:
+
+```
+>>> print("Hello, World")
+```
+
+You should see something like this:
+
+![Hello, World](./screenshots/hello_world.png)
+
+There's a lot going on here, let's unpack it:
+
+* `print` is the Python instruction to output some text to the screen.
+	* Normal text is written in black, you'll noticed that print is slightly differently coloured to show it is special, a **keyword**
+* the round brackets that come after the `print` are there to hold what it is that we want to print
+* the text we want to print are held in quotation marks, this shows that we are dealing with some text, not Python instructions
+* then we've hit enter and, in blue, the output is shown
+
+We could use Python as a calculator.
+
+![2+2](./screenshots/two_plus_two.png)
+
+These are numbers, not text, so Python doesn't need to wrap them in quotation marks. 
 
 ## Variables, Data Types and simple input/output
 ## User Interface using Turtles
