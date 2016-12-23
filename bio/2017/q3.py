@@ -92,6 +92,7 @@ def test(str, expected):
 	p, i, n, w = split_input(str)
 	candidates = generate_candidates(p, i, n, w)
 	cparcels = count_parcels(candidates, p, n, w)
+	print(cparcels)
 	if cparcels == expected:
 		print('True')
 	else: 
