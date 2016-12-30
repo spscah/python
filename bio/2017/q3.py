@@ -1,3 +1,7 @@
+# the key takeaway in this solution is not to brute force the individual ways parcels 
+# could be formulated. The answer is the number of possibilities, which means considering
+# where substitutions can be made and how many of them are feasible. 
+
 # p is the number of parcels
 # i is the options for the weights
 # n is the number of items in total 
@@ -45,6 +49,7 @@ def generate_value_counts(values, counts):
 		rv[x[0]] += 1
 	return rv
 
+# for the given number of items requirements in the given number of parcels, what combinations are possible 
 def generate_combinations(values, p, n):
 	candidates = [[x] for x in values]
 	while p > 1:
@@ -56,37 +61,36 @@ def generate_combinations(values, p, n):
 				next_generation.append(ng)
 		candidates = list(next_generation)
 		p -= 1 
+	# TODO this seems like a bit of a waste, to generate them all and then decide which are valid - could certainly 
+	# look to be cleverer here 
 	candidates = [x for x in candidates if sum(x) == n]
 	return candidates
 
+# simply weight a single parcel combination based on value counts and the indices of the weights 
 def weigh_combination(combination, value_counts):
 	if combination == []: 
 		return 1
+
 	val = combination.pop()
 	return value_counts[val] * weigh_combination(combination, value_counts)
 
-
-def weigh_combinations(combinations, value_counts):
-	if combinations == []: 
-		return 0
-
-	combo = combinations.pop()
-
-	return weigh_combination(combo, value_counts) + weigh_combinations(combinations, value_counts)
-
-
-
+# given the candidate parcels, how can they be combined? 
 def count_parcels(candidates, p, n, w):
+	# create a list of pairs of the candidates, with their item counts 
 	counts = [(len(x), x) for x in candidates]
 	if counts == []:
 		return 0
 	values = set([x[0] for x in counts])
+	# determine how many of each item count there are 
 	value_counts = generate_value_counts(values, counts)
+	# how could the generated item counts be combined to create the correct distributions 
 	combinations = generate_combinations(values, p, n)
 
-	return weigh_combinations(combinations, value_counts)
+	# given the possible distributions, and the number of each quantity, multiply through and add them together 
+	return sum([weigh_combination(combo, value_counts) for combo in combinations])
 
 
+# take in the input and the expected output and format the printing appropriately 
 def test(str, expected):
 	print(str)
 	p, i, n, w = split_input(str)
@@ -98,6 +102,8 @@ def test(str, expected):
 	else: 
 		print("expecting {0}, got {1} {2}".format(expected, cparcels, cparcels == expected))
 	print("")
+
+# the official mark scheme inputs and their expected values. 
 
 test("2 3 4 3", 3)
 test("1 1 20 20", 1)
