@@ -1,9 +1,9 @@
 # python
 An introductory python course
 
-This course takes you on a week by week course through learning python. 
+This course takes you on a step by step course through learning python. 
 
-Each week should has a focus, with questions for discussion in class and then to spend some time working at home. 
+Each week should has a focus, with questions for discussion in class and then to spend some time working at home or in your own time. 
 
 This course is heavily influenced by [How to Think Like a Computer Scientist](http://openbookproject.net/thinkcs/python/english3e/), although some of the exercises are very different. 
 
@@ -15,5 +15,10 @@ This course is heavily influenced by [How to Think Like a Computer Scientist](ht
 1. Conditional statements 
 1. Chatterbox Functions 
 1. Iteration 
-
+1. Stings and lists
+1. Tuples  
+1. File input-output
+1. Using and creating modules 
+1. Basic Objects 
+1. Recursion 
 
