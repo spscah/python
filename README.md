@@ -22,3 +22,6 @@ This course is heavily influenced by [How to Think Like a Computer Scientist](ht
 1. Basic Objects 
 1. Recursion 
 
+## File types 
+
+The files shown in these folders are a mixture of `.md' files which are markdown (a way of marking text to show how it should be shown, like HTML) and of 'Jupyter notebooks' which are an interactive file type, allowing python to be shown alongside text and then run by the user. (When displayed via [github.com], though, they will be static HTML files.)
